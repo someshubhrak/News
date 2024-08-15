@@ -9,7 +9,13 @@ import Foundation
 typealias NewsFeedNetworkService = NetworkService<NewsFeedServiceRequestProvider,
                                                        NewsFeedResponse>
 
-class NewsFeedService {
+/// Abstraction on the Service
+protocol NewsFeedServiceType {
+    func fetch(query: NewsFeedServiceQuery) async throws -> NewsFeedDataModel
+    func fetch(searchTerm: String) async throws -> NewsFeedDataModel
+}
+
+class NewsFeedService: NewsFeedServiceType {
     func fetch(query: NewsFeedServiceQuery) async throws -> NewsFeedDataModel {
         let requestProvider = NewsFeedServiceRequestProvider(queryParams: query)
         let networkService = NewsFeedNetworkService(requestProvider: requestProvider)

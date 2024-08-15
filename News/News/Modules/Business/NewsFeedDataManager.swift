@@ -27,6 +27,7 @@ class NewsFeedDataManager: ObservableObject, NewsFeedDataManagerType {
     
     private let moduleFactory: ModuleFactoryType
     private var persistenceStore: PersistenceDataStoreType? { moduleFactory.persistenceStore }
+    private var newsFeedService: NewsFeedServiceType { moduleFactory.newsFeedService }
 
     /// Cache the book marked items and publish changes on it.
     var bookmarkedItems: [NewsFeedDataModel.NewsFeedItem] = [] {
@@ -47,7 +48,7 @@ class NewsFeedDataManager: ObservableObject, NewsFeedDataManagerType {
     
     func loadNewsFeeds(searchTerm: String) async throws -> NewsFeedDataModel {
         let queryParam = NewsFeedServiceQuery(searchTerm: searchTerm)
-        var newsDataModel = try await NewsFeedService().fetch(query: queryParam)
+        var newsDataModel = try await newsFeedService.fetch(query: queryParam)
 
         // Filter out the valid items
         newsDataModel.newsFeeds = newsDataModel.newsFeeds.filter { !$0.title.isEmpty && !$0.url.isEmpty }

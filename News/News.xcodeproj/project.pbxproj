@@ -34,6 +34,7 @@
 		E61689BF2C6E3AA4000F4765 /* NewsFeedDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61689B72C6E3AA4000F4765 /* NewsFeedDataManagerMock.swift */; };
 		E61689C02C6E3AA4000F4765 /* PersistenceDataStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61689B82C6E3AA4000F4765 /* PersistenceDataStoreMock.swift */; };
 		E61689C12C6E3AA4000F4765 /* NewsFeedListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61689BA2C6E3AA4000F4765 /* NewsFeedListViewModelTest.swift */; };
+		E61689C32C6E691D000F4765 /* NewsFeedServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61689C22C6E691D000F4765 /* NewsFeedServiceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		E61689B72C6E3AA4000F4765 /* NewsFeedDataManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedDataManagerMock.swift; sourceTree = "<group>"; };
 		E61689B82C6E3AA4000F4765 /* PersistenceDataStoreMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceDataStoreMock.swift; sourceTree = "<group>"; };
 		E61689BA2C6E3AA4000F4765 /* NewsFeedListViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedListViewModelTest.swift; sourceTree = "<group>"; };
+		E61689C22C6E691D000F4765 /* NewsFeedServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedServiceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +287,7 @@
 				E61689B62C6E3AA4000F4765 /* ModuleMockFactory.swift */,
 				E61689B72C6E3AA4000F4765 /* NewsFeedDataManagerMock.swift */,
 				E61689B82C6E3AA4000F4765 /* PersistenceDataStoreMock.swift */,
+				E61689C22C6E691D000F4765 /* NewsFeedServiceMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61689C32C6E691D000F4765 /* NewsFeedServiceMock.swift in Sources */,
 				E61689BF2C6E3AA4000F4765 /* NewsFeedDataManagerMock.swift in Sources */,
 				E61689C12C6E3AA4000F4765 /* NewsFeedListViewModelTest.swift in Sources */,
 				E61689BD2C6E3AA4000F4765 /* NewsFeedDataManagerTests.swift in Sources */,
