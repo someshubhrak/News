@@ -20,8 +20,8 @@ protocol NewsFeedDataManagerType {
     @MainActor func removeBookMark(newsItem: NewsFeedDataModel.NewsFeedItem) throws
 }
 
-/// This a class that routes and calls to different store
-/// i.e from network service and local storage
+/// This a class that routes and manages calls to different stores
+/// i.e to network service and local storage
 /// This class acts as a wrapper to load and store methods.
 class NewsFeedDataManager: ObservableObject, NewsFeedDataManagerType {
     

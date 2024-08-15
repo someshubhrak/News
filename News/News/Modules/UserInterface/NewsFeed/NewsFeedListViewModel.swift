@@ -11,7 +11,7 @@ import SwiftUI
 typealias NewsItemRowViewModel = NewsFeedListViewModel.RowItemViewModel
 
 class NewsFeedListViewModel: ObservableObject {
-    /// Different parts of the flow in this view model
+    /// Different stages of the flow in this view model
     /// is represented by the FlowState enum
     enum FlowState {
         case initial
@@ -24,6 +24,8 @@ class NewsFeedListViewModel: ObservableObject {
 
     /// Row view models
     private(set) var rowViewModels: [RowItemViewModel] = []
+
+    /// Default search text - The underlying api errors out for a blank search text.
     @Published var searchText: String = "Current affairs"
 
     // For internal use and references
